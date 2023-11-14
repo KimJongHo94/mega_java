@@ -94,6 +94,29 @@ public class ArrayEx24_연습 {
 		// 예) c => {5, 3, 1, 0, 0}
 		int[] c = { 0 , 0 , 0 , 0 , 0 };
 		
+		// a[] : 10 , 4 , 5 , 3 , 1 
+		int odd = 0;
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] % 2 == 1) {
+				odd += 1;
+			}
+		}
+		System.out.println();
+		
+		int j = 0;
+		
+		for (int i = 0; i < a.length; i++) {
+			
+			if (a[i] % 2 == 1) {
+				c[j] = a[i];
+				j++;
+			} 
+			
+		}
+		
+		for (int i = 0; i < c.length; i++) {
+			System.out.print(c[i] + " ");
+		}
 		
 	}
 

@@ -9,7 +9,6 @@ package step3_01.arrayAdvanced;
  * 14	23	22	21	8	
  * 13	12	11	10	9
  * 
- * 
  * 1) 오른쪽 방향으로 순서대로 숫자저장
  * 2) 아래쪽 방향으로 순서대로 숫자저장
  * 3) 왼쪽 방향으로 순서대로 숫자저장
@@ -17,7 +16,6 @@ package step3_01.arrayAdvanced;
  * 
  * 1)2)3)4) 반복
  */
-
 
 public class ArrayEx43_문제 {
 
