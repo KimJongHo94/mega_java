@@ -89,9 +89,23 @@ public class StringEx03 {
 		
 		System.out.println("temp.length : " + temp.length);
 		System.out.println("temp : " + Arrays.toString(temp));
+		System.out.println("\n================\n");
+		// 참고) 문자열 비교 : compareTo() => 정렬 알고리즘
+		String str5 = "씨";
+		String str6 = "자바";
+		String str7 = "파이썬";
+		String str8 = "씨";
 		
-		// 참고) 문자열 비교 : compareTo()
+		// 왼쪽데이터(기준) 작을 경우 음수가 반환된다.
+		System.out.println("str5.compareTo(str6) : " + str5.compareTo(str6)); // -616
+		System.out.println("str5.compareTo(str7) : " + str5.compareTo(str7)); // -3556
 		
+		// 왼쪽데이터(기준) 클 경우 양수가 반환된다.
+		System.out.println("str6.compareTo(str5) : " + str6.compareTo(str5)); // 616
+		System.out.println("str7.compareTo(str5) : " + str7.compareTo(str5)); // 3556
+		
+		// 동일한 경우 0을 반환된다.
+		System.out.println("str5.compareTo(str8) : " + str5.compareTo(str8)); // 0
 	}
 
 }

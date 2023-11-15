@@ -34,7 +34,19 @@ public class StringEx04 {
 		System.out.println("str3 : " + str3);
 		System.out.println(str3 + 1000000); // 20000001000000
 		
+		System.out.println("\n================\n");
 		// 참고) 구글에서 ASCII 코드표 검색 (65 : 'A' , 97 : 'a' 상식적으로 외우기)
+		
+		// 문자 > 숫자
+		char ch1 = 'a';
+		int n1 = ch1;
+		System.out.println(ch1 + " / " + n1);
+		
+		int n2 = 65;
+		char ch2 = (char)n2;
+		System.out.println(ch2 + " / " + n2);
+		
+		System.out.println((int)'s' + 3); // 118
 		
 	}
 
