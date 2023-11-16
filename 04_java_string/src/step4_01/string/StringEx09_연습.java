@@ -22,36 +22,47 @@ public class StringEx09_연습 {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
-		Random ran = new Random();
-		
-		String[] words = {"java", "mysql", "jsp", "spring"};
-		
-		int shuffle = 0;
-		
-		while (shuffle < 100) {
-			
-			int rNum1 = ran.nextInt(4); // 0 ~ 3
-			String temp = words[0];
-			words[0] = words[rNum1];
-			words[rNum1] = temp;
-			shuffle++;
-		}
-		
-		int cnt = 0;
-		int i = 0;
-		while (cnt < words.length) {
-			
-			System.out.println("문제 : " + words[i]);
-			System.out.print("입력 : ");
-			String getStr = scan.next();
-			
-			if (getStr.equals(words[i])) {
-				cnt++;
-				i++;
-			} else {
-				continue;
-			}
-		}
+    Random ran = new Random();
+
+    String[] words = {"java", "mysql", "jsp", "spring"};
+    boolean isRun = true;
+
+    System.out.println("Before) " + Arrays.toString(words));
+
+    int cnt = 0;
+
+    while (cnt < 1000) {
+
+      // words 문자열 배열 크기 만큼 난수 생성
+      int rNum = ran.nextInt(4); // 0 ~ 3
+      String temp = words[0];           // 문자열 temp 변수에 words[0] 번째 데이터 값 대입
+      words[0] = words[rNum];           // words[0] 자리에 words[난수] 데이터 섞기
+      words[rNum] = temp;               // words[난수]에 temp 데이터 대입
+      cnt++;
+    }
+
+    System.out.println("After) " + Arrays.toString(words));
+
+    int idx = 0;
+
+    while (isRun) {
+
+      System.out.println("문제 : " + words[idx]);
+      System.out.print("입력 : ");
+      String getStr = scan.next();
+
+      if (getStr.equals(words[idx])) {
+        cnt++;
+        idx++;
+      }
+
+      if (idx == words.length) {
+        System.out.println("=== 게임 종료 ===");
+        isRun = false;
+      }
+
+    }
+    scan.close();
 	}
 
 }

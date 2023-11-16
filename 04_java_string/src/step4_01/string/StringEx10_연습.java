@@ -21,37 +21,40 @@ public class StringEx10_연습 {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
-		
-		String start = "자전거";
-		//System.out.println("제시어 : " + start);
-		boolean isRun = true;
-		
-//		String temp = start.substring(start.length()-1);
-//		System.out.println(temp);
-		
-		while (isRun) {
-			
-			System.out.println("제시어 : " + start);
-			System.out.print("입력 : ");
-			String getStr = scan.next();
-			
-			if (getStr.equals("quit")) {
-				System.out.println("- 종료 -");
-				break;
-			}
-			
-			String firstStr = start.substring(start.length()-1);
-		
-			if (getStr.substring(0, 1).equals(firstStr)) {
-				
-				start = getStr;
-				
-			} else {
-				continue;
-			}
-			
-		}
-		scan.close();
+
+    String start = "자전거";
+
+    boolean isRun = true;
+    //char temp = start.charAt(start.length() - 1);
+    //System.out.println(temp); // 거
+
+    while (isRun) {
+
+      System.out.println("제시어 : " + start);
+
+      // start 문자열 변수 끝 문자를 확인하기 위해 start.length() - 1 해당 문자열 크기에서 - 1 해주기
+      char temp1 = start.charAt(start.length() - 1);
+
+      System.out.print("입력 : ");
+      String getStr = scan.next();
+
+      if (getStr.equals("quit")) {
+        System.out.println("=== 게임 종료 ===");
+        isRun = false;
+      }
+
+      if (!getStr.isEmpty()) {
+        char temp2 = getStr.charAt(0);
+
+        if (Character.compare(temp1, temp2) == 0) {
+          start = getStr;
+        } else {
+          continue;
+        }
+
+      }
+    }
+    scan.close();
 		
 	}
 
