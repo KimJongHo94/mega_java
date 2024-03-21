@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연습예시</title>
+<script>
+
+	// 문제 1) 숫자 2개를 입력받아, 합 출력
+	let num1 = prompt("숫자1 입력");
+	let num2 = prompt("숫자2 입력");
+	let result = Number(num1) + Number(num2);
+	console.log(result, typeof result);
+	
+	// 문제 2) 숫자 1개를 입력받아, 홀수이면 true 출력
+	let num3 = prompt("숫자 입력");
+	let result2 = (Number(num3) % 2 == 1) ? true : false;
+	console.log(result2);
+	// 문제 3) 성적을 입력받아, 60점 이상이고 100점 이하이면 true 출력
+	let score = prompt("성적 입력");
+	let result3 = (60 <= Number(score) && Number(score) <= 100) ? true : false;
+	console.log(result3);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

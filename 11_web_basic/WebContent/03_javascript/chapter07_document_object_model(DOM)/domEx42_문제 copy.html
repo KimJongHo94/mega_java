@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연습예시</title>
+<script>
+
+	function checkData() {
+
+		console.log("배송 방법   : " + document.order.deliveryMethod.value);
+		console.log("배송지 선택 : " + document.order.place.value);
+		console.log("받는 사람   : " + document.order.receivePerson.value);
+		console.log("휴대폰 번호 : " + document.order.phone1.value + " - " + document.order.phone2.value + " - " + document.order.phone3.value);
+		console.log("배송 방법   : " + document.order.telephone.value);
+		console.log("주소        : " + document.order.addr1.value);
+		console.log("지번 주소   : " + document.order.addr2.value);
+		console.log("도로명 주소 : " + document.order.addr3.value);
+		console.log("나머지 주소 : " + document.order.addr4.value);
+		console.log("메세지 선택 : " + document.order.memoChoice.value);
+		console.log("메세지      : " + document.order.memo.value);
+
+	}
+
+</script>
+</head>
+<body>
+
+	<!-- 확인버튼을 눌렀을때 폼 안의 데이터의 값들을 console.log에 출력하시오. -->
+
+	<form name="order">
+		<fieldset>
+			<legend>배송지 정보</legend>
+			<p>
+				배송방법 : 
+			    <input type="radio" value="일반택배" name="deliveryMethod" checked>일반택배 &emsp; 
+				<input type="radio" value="편의점택배" name="deliveryMethod">편의점택배 &emsp;  
+				<input type="radio" value="해외배송" name="deliveryMethod">해외배송&emsp; 
+			</p>
+			<p>
+				배송지 선택 : 
+				<input type="radio" value="기본배송지" name="place" checked>기본배송지 &emsp; 
+				<input type="radio" value="새로입력" name="place">새로입력 &emsp; 
+				<input type="radio" value="최근배송지" name="place">최근배송지 &emsp; 
+			</p>
+			<p>
+				받으실 분 : 
+				<input type="text" size="40" name="receivePerson"/>
+			</p>
+			<p>
+				휴대폰번호 : 
+				<select name="phone1">
+						<option value="none">없음</option>
+						<option selected>010</option>
+						<option>011</option>
+						<option>016</option>
+						<option>017</option>
+						<option>018</option>
+						<option>019</option>
+				</select> 
+				 - <input size="10px" type="text" name="phone2"> 
+				 - <input size="10px" type="text" name="phone3">
+			</p>
+			<p>
+				유선전화(선택) : 
+				<select name="telephone">
+						<option>02</option>
+						<option>031</option>
+						<option>032</option>
+						<option>070</option>
+				</select> - 
+				<input type="text" size="10px"> - 
+				<input type="text" size="10px">
+			</p>
+			<p>
+				주소 : 
+				<input type="text" size="5" name="addr1"> <a href="#">우편번호검색</a><br>
+			</p>
+			<p>
+				지번 주소 : <input type="text" size="50" name="addr2"/><br><br> 
+				도로명 주소 : <input type="text" size="50" name="addr3"/><br><br> 
+				나머지 주소 : <input type="text" size="50" name="addr4"/> 
+			</p> 
+			<p>
+				배송 메시지 : 
+				<input type="radio" value="yes" name="memoChoice">예 &emsp; 
+				<input type="radio" value="no" name="memoChoice" checked>아니요<br>
+				<input type="text" size="50" placeholder="택배 기사님께 전달할 메시지를 남겨주세요." name="memo" />
+			</p>
+			<p>
+				<input type="button" value="확인" onclick="checkData()">
+			</p>
+		</fieldset>
+	</form>	
+					
+</body>
+</html>

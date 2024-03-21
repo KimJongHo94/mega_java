@@ -1,0 +1,10 @@
+try {
+			getConnection();
+			
+			String sql = "";
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			getClose();
+		}

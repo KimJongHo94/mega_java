@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>데이터의 형변환(casting)</title>
+<script>
+
+
+	// 1) String(숫자) : 숫자 > 문자열 형변환 
+	let num1 = 10000;
+	let strNum1 = String(num1);
+	let strNum2 = num1 + "";
+	console.log("num1 : ", typeof num1);
+	console.log("strNum1 : ", typeof strNum1);
+	console.log("strNum2 : ", typeof strNum2);
+	console.log("");
+	// 2) Number(문자열) : 문자열 > 숫자 형변환
+	let num2 = "27000";
+	let numStr1 = Number(num2);
+	console.log("num2 : ", typeof num2);
+	console.log("numStr1 : ", typeof numStr1);
+	console.log("");
+
+	// 3) parseInt(실수) : 실수 > 정수
+	let double1 = 3.14;
+	let doubleNum = parseInt(double1);
+	let double2 = 10 / 3;
+	console.log("double1 : ", typeof double1);
+	console.log("doubleNum : ", typeof doubleNum);
+	console.log(doubleNum);
+	console.log(double2, typeof double2);
+	console.log("");
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
